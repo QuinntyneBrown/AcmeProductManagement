@@ -1,0 +1,25 @@
+<div class="apm-heading-group">
+  <h1 class="apm-panel-heading">Product List</h1>
+  <div class="apm-heading-group__actions-container">
+    <button class="apm-button" (click)="select.emit({ })">
+      Create
+    </button>
+  </div>
+</div>
+
+<table mat-table [dataSource]="dataSource" class="apm-table">
+
+  <ng-container matColumnDef="productName">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let product" (click)="select.emit(product)" class="apm-router-link-cell"> {{ product.productName }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let product; columns: displayedColumns;"></tr>
+
+</table>
+
+<mat-paginator class="apm-paginator"
+  showFirstLastButtons
+  [pageSizeOptions]="pageSizeOptions">
+</mat-paginator>

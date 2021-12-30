@@ -9,9 +9,9 @@ namespace Acme.Api.Features
         {
             return new ()
             {
-                ProductId = product.ProductId
+                ProductId = product.ProductId,
+                ProductName = product.ProductName
             };
         }
-        
     }
 }

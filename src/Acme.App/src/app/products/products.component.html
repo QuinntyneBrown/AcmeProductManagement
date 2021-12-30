@@ -1,0 +1,4 @@
+<div apmListDetail *ngIf="vm$ | async as vm">
+  <apm-product-list [products]="vm.products" (select)="onSelect($event)"></apm-product-list>
+  <apm-product-detail [product]="vm.selected" (save)="onSave($event)"></apm-product-detail>
+</div>

@@ -40,10 +40,12 @@ namespace Acme.Api.Features
             public async Task<Response> Handle(Request request, CancellationToken cancellationToken)
             {
                 var product = await _context.Products.SingleAsync(x => x.ProductId == request.Product.ProductId);
-                
+
+                product.ProductName = request.Product.ProductName;
+
                 await _context.SaveChangesAsync(cancellationToken);
                 
-                return new Response()
+                return new ()
                 {
                     Product = product.ToDto()
                 };

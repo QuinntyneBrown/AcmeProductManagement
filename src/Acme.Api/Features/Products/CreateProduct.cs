@@ -39,7 +39,7 @@ namespace Acme.Api.Features
         
             public async Task<Response> Handle(Request request, CancellationToken cancellationToken)
             {
-                var product = new Product();
+                var product = new Product() { ProductName = request.Product.ProductName };
                 
                 _context.Products.Add(product);
                 

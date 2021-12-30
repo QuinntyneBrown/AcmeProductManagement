@@ -1,0 +1,16 @@
+<h1 *ngIf="!product.productId" class="apm-panel-heading">Create Product</h1>
+<h1 *ngIf="product.productId" class="apm-panel-heading">Edit Product</h1>
+
+
+<form [formGroup]="form" class="apm-form">
+  <div class="apm-field">
+    <label class="apm-label">Name</label>
+    <input type="text" formControlName="productName" autocomplete="off" class="apm-input">
+  </div>
+</form>
+
+<div class="apm-actions">
+  <button class="apm-button" (click)="save.emit(form.value)" [disabled]="!form.valid || form.pristine">
+    Save
+  </button>
+</div>
