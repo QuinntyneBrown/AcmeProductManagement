@@ -1,0 +1,16 @@
+{
+  "domainNamespace": "Acme.Api",
+  "applicationNamespace": "Acme.Api",
+  "infrastructureNamespace": "Acme.Api",
+  "apiNamespace": "Acme.Api",
+  "domainDirectory": "C:\\projects\\Acme\\src\\Acme.Api",
+  "applicationDirectory": "C:\\projects\\Acme\\src\\Acme.Api",
+  "infrastructureDirectory": "C:\\projects\\Acme\\src\\Acme.Api",
+  "apiDirectory": "C:\\projects\\Acme\\src\\Acme.Api",
+  "path": "C:\\projects\\Acme",
+  "dbContext": "AcmeDbContext",
+  "sourceFolder": "src",
+  "resources": [
+    "Product"
+  ]
+}
